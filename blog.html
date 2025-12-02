@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog — Personal Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">[NAME]</a> <!-- EDIT NAME -->
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav class="nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:36px 0;">
+    <h1>Blog</h1>
+    <p class="muted">This page contains card placeholders for blog entries. No real posts are included.</p>
+
+    <!-- ADD BLOG POSTS HERE -->
+    <div class="cards" style="margin-top:18px;">
+      <div class="card">
+        <h3>Post Title Placeholder</h3>
+        <p class="muted">Summary placeholder — add post content here.</p>
+      </div>
+      <div class="card">
+        <h3>Post Title Placeholder</h3>
+        <p class="muted">Summary placeholder — add post content here.</p>
+      </div>
+      <div class="card">
+        <h3>Post Title Placeholder</h3>
+        <p class="muted">Summary placeholder — add post content here.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p class="muted">© [NAME]</p></div></footer>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    btn.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>

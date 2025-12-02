@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Personal Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">[NAME]</a> <!-- EDIT NAME -->
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav class="nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:36px 0;">
+    <h1>Contact</h1>
+    <p class="muted">Reach out via any of the channels below.</p>
+
+    <div class="contact-list" style="margin-top:18px;">
+      <!-- UPDATE LINK -->
+      <a class="contact-item" href="#" aria-label="LinkedIn">
+        <span class="icon"><i class="fab fa-linkedin"></i></span>
+        <span class="muted">LinkedIn: [LINKEDIN_URL]</span>
+      </a>
+
+      <a class="contact-item" href="#" aria-label="GitHub">
+        <span class="icon"><i class="fab fa-github"></i></span>
+        <span class="muted">GitHub: [GITHUB_URL]</span>
+      </a>
+
+      <a class="contact-item" href="mailto:example@example.com" aria-label="Email">
+        <span class="icon"><i class="fas fa-envelope"></i></span>
+        <span class="muted">Email: example@example.com</span>
+      </a>
+
+      <a class="contact-item" href="#" aria-label="Instagram">
+        <span class="icon"><i class="fab fa-instagram"></i></span>
+        <span class="muted">Instagram: [INSTAGRAM_HANDLE]</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p class="muted">© [NAME]</p></div></footer>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    btn.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>

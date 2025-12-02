@@ -1,0 +1,152 @@
+/* CSS variables and base styles */
+:root{
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+  --border: #1f2933;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+  padding-inline:clamp(16px,4vw,48px);
+}
+
+/* Header */
+.site-header{
+  border-bottom:1px solid var(--border);
+  background:transparent;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 0;
+}
+.brand{
+  font-weight:700;
+  color:var(--text);
+  text-decoration:none;
+  font-size:clamp(18px,2.2vw,22px);
+}
+.nav{
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+.nav a{
+  color:var(--muted);
+  text-decoration:none;
+  padding:6px 8px;
+  border-radius:4px;
+}
+.nav a:hover{color:var(--text);text-decoration:underline; text-decoration-color:var(--accent)}
+
+.nav.open{display:flex}
+.nav-toggle{
+  display:none;
+  background:transparent;
+  color:var(--text);
+  border:1px solid var(--border);
+  padding:6px 8px;
+  border-radius:6px;
+  font-size:18px;
+}
+
+/* Hero */
+.hero{
+  display:grid;
+  grid-template-columns:1fr minmax(260px,40%);
+  gap:28px;
+  padding:clamp(28px,6vw,60px) 0;
+  align-items:start;
+}
+.hero-left .greeting{color:var(--muted);margin:0 0 8px}
+.hero-name{margin:0;font-size:clamp(28px,5vw,44px);line-height:1.05}
+.hero-sub{color:var(--muted);margin-top:8px;font-size:clamp(14px,1.8vw,16px)}
+.hero-actions{margin-top:18px}
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:#061321;
+  padding:8px 12px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--accent);margin-left:10px}
+
+.code-card{
+  background:var(--card);
+  color:var(--text);
+  padding:18px;
+  border:1px solid var(--border);
+  border-left:4px solid var(--accent);
+  border-radius:8px;
+  overflow:auto;
+  font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
+  font-size:clamp(12px,1.6vw,14px);
+  max-height:min(46vh,420px);
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+/* Skills */
+.skills{margin:36px 0}
+.skill-tags{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.tag{
+  background:var(--card);
+  color:var(--text);
+  padding:8px 10px;
+  border:1px solid var(--border);
+  border-radius:6px;
+  font-weight:600;
+}
+
+.skill-categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:20px}
+.category h3{margin:0 0 8px}
+.category ul{margin:0;padding-left:18px;color:var(--muted)}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--border);padding:18px 0;margin-top:40px}
+.muted{color:var(--muted)}
+
+/* Blog cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--border);padding:18px;border-radius:8px}
+
+/* Contact list */
+.contact-list{display:flex;flex-direction:column;gap:12px}
+.contact-item{display:flex;align-items:center;gap:12px;color:var(--text);text-decoration:none}
+.contact-item .icon{width:28px;text-align:center;color:var(--text)}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr 320px}
+  .skill-categories{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .nav{display:none;position:absolute;right:16px;top:64px;background:var(--card);padding:12px;border:1px solid var(--border);border-radius:8px}
+  .nav-toggle{display:inline-block}
+  .hero{grid-template-columns:1fr;}
+  .hero-right{order:2}
+  .hero-left{order:1}
+  .skill-categories{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+}
