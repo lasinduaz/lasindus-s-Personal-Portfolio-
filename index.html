@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -17,7 +19,7 @@
       <button class="nav-toggle" aria-label="Open navigation">☰</button>
       <nav class="nav" id="main-nav">
         <a href="index.html">Home</a>
-        <!--<a href="blog.html">Blog</a> -->
+        <!--<a href="about.html">About</a>-->
         <!--<a href="blog.html">Blog</a>-->
         <a href="contact.html">Contact</a>
       </nav>
@@ -29,16 +31,16 @@
     <section class="hero" aria-label="Introduction">
       <div class="hero-left">
         <p class="greeting">Hello There,</p>
-        <h1 class="hero-name"> I Am Lasindu Samarajeewa</h1> <!-- EDIT NAME -->
+        <h1 class="hero-name"> I Am <span style="color: #007BFF;">Lasindu Samarajeewa</span></h1> <!-- EDIT NAME -->
         <p class="hero-sub">Software Engineer | Systems &amp; Backend Enthusiast</p>
-        <p class="hero-actions">
-          <a class="btn" href="about.html">About</a>
-          <a class="btn btn-outline" href="contact.html">Contact</a>
+        <p class="hero-desc">
+          I am a DevOps-focused software engineer working with <strong>cloud infrastructure</strong>, <strong>automation</strong>, and <strong>containerization</strong>. 
+          <br><br>
+          I build and manage systems using <strong>Docker</strong>, <strong>CI/CD pipelines</strong>, and <strong>cloud platforms</strong>, with a focus on making applications reliable and easy to maintain. 
+          <br><br>
+          I actively research emerging technologies and underexplored engineering concepts to strengthen my understanding of system behavior in production environments.
         </p>
       </div>
-
-</pre>
-      </aside>
     </section>
 
     <!-- SKILLS quick list -->
@@ -105,4 +107,5 @@
     btn.addEventListener('click', () => nav.classList.toggle('open'));
   </script>
 </body>
+
 </html>
